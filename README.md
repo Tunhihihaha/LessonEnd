@@ -53,7 +53,7 @@ Bạn cần cài đặt:
     Ứng dụng sẽ chạy tại địa chỉ: `http://127.0.0.1:5000/`.
 
 ### Cấu trúc thư mục (Directory Structure)
-
+---
 mini-game-dashboard/
 ├── static/                          
 │   ├── script.js                  
