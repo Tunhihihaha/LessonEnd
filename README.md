@@ -55,3 +55,32 @@ Bạn cần cài đặt:
 ### Cấu trúc thư mục (Directory Structure)
 
 Dự án yêu cầu cấu trúc thư mục tiêu chuẩn của Flask để hoạt động:
+. ├── app.py # (Backend) Ứng dụng Flask chính và logic API ├── templates/ # (Frontend) Chứa các file HTML │ └── index.html # Trang chủ, chứa form dự đoán và dashboard ├── static/ # (Frontend) Chứa các tài nguyên tĩnh │ ├── script.js # Logic xử lý form, gọi API và vẽ biểu đồ Chart.js │ └── style.css # CSS tùy chỉnh và các lớp Tailwind (Custom styles) ├── train (1).csv # File dữ liệu huấn luyện (Dataset) ├── test (1).csv # File dữ liệu kiểm tra (Dataset) ├── sample_submission.csv # File mẫu nộp (Dataset) └── README.md # File này
+---
+
+## 🚀 Sử dụng (Usage)
+
+1.  Mở trình duyệt và truy cập vào địa chỉ `http://127.0.0.1:5000/`.
+2.  **Dự đoán Giá Nhà:**
+    * Nhập 6 giá trị thuộc tính tương ứng vào biểu mẫu.
+    * Nhấn nút **"Dự đoán Giá Nhà"**.
+    * Kết quả dự đoán sẽ hiển thị ngay phía trên biểu mẫu.
+3.  **Xem Dashboard:** Kéo xuống phần **"Phân tích Dữ liệu"** để xem các biểu đồ trực quan hóa dữ liệu được tải tự động.
+
+---
+
+## 🌐 API Endpoints
+
+| Phương thức | Endpoint | Mô tả | Chi tiết |
+| :---: | :--- | :--- | :--- |
+| **GET** | `/` | Trang chủ của ứng dụng. | Trả về file `index.html`. |
+| **POST** | `/predict` | **Dự đoán giá nhà** (Housing Price Prediction). | **Yêu cầu (JSON):** 6 thuộc tính. **Phản hồi (JSON):** `{"prediction": <giá_dự_đoán>}`. |
+| **GET** | `/data` | Cung cấp dữ liệu mô phỏng cho dashboard. | **Phản hồi (JSON):** Dữ liệu cho 3 biểu đồ dashboard. |
+
+---
+
+## 📌 Ghi chú (Notes)
+
+* **Mô hình Dự đoán:** Hàm `predict_house_price` trong `app.py` hiện tại là một **công thức tuyến tính mô phỏng** (placeholder), không phải là mô hình Machine Learning được huấn luyện thực tế.
+* **Dữ liệu Phân tích:** Dashboard hiển thị dữ liệu **mô phỏng cứng** từ hàm `get_data` trong `app.py`, không đọc trực tiếp từ các file CSV.
+* **Phát triển Tiềm năng:** Các file CSV đã cung cấp là cơ sở để bạn có thể tích hợp một mô hình Machine Learning thực tế vào endpoint `/predict` và sử dụng dữ liệu thực để vẽ biểu đồ trên dashboard.
