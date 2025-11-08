@@ -52,19 +52,6 @@ Bạn cần cài đặt:
     ```
     Ứng dụng sẽ chạy tại địa chỉ: `http://127.0.0.1:5000/`.
 
-### Cấu trúc thư mục (Directory Structure)
----
-mini-game-dashboard/
-├── data/                          # Thư mục chứa dữ liệu CSV
-│   ├── steam.csv                  # Dữ liệu game Steam chính
-│   └── Steam_2024_bestRevenue_1500.csv  # Dữ liệu doanh thu
-├── frontend/                      # Giao diện web
-│   └── index.html                 # File HTML chính
-├── mini_game_api.py               # Backend API Flask
-├── requirements.txt               # Danh sách thư viện Python
-└── README.md                      # File này                     
----
-
 ## 🚀 Sử dụng (Usage)
 
 1.  Mở trình duyệt và truy cập vào địa chỉ `http://127.0.0.1:5000/`.
