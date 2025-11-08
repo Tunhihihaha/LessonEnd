@@ -54,8 +54,16 @@ Bạn cần cài đặt:
 
 ### Cấu trúc thư mục (Directory Structure)
 
-Dự án yêu cầu cấu trúc thư mục tiêu chuẩn của Flask để hoạt động:
-. ├── app.py # (Backend) Ứng dụng Flask chính và logic API ├── templates/ # (Frontend) Chứa các file HTML │ └── index.html # Trang chủ, chứa form dự đoán và dashboard ├── static/ # (Frontend) Chứa các tài nguyên tĩnh │ ├── script.js # Logic xử lý form, gọi API và vẽ biểu đồ Chart.js │ └── style.css # CSS tùy chỉnh và các lớp Tailwind (Custom styles) ├── train (1).csv # File dữ liệu huấn luyện (Dataset) ├── test (1).csv # File dữ liệu kiểm tra (Dataset) ├── sample_submission.csv # File mẫu nộp (Dataset) └── README.md # File này
+├── app.py # (Backend) Ứng dụng Flask chính và logic API 
+├── templates/ # (Frontend) Chứa các file HTML 
+│ └── index.html # Trang chủ, chứa form dự đoán và dashboard 
+├── static/ # (Frontend) Chứa các tài nguyên tĩnh │ 
+├── script.js # Logic xử lý form, gọi API và vẽ biểu đồ Chart.js 
+│ └── style.css # CSS tùy chỉnh và các lớp Tailwind (Custom styles) 
+├── train (1).csv # File dữ liệu huấn luyện (Dataset) 
+├── test (1).csv # File dữ liệu kiểm tra (Dataset) 
+├── sample_submission.csv # File mẫu nộp (Dataset) 
+└── README.md # File này
 ---
 
 ## 🚀 Sử dụng (Usage)
